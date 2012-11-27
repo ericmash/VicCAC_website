@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body id="frontpage-en">
 <div id="bodyContainer">
 	<div id="bodyBorderLeft">
 		<div id="bodyBorderLeftTopCap">
@@ -47,7 +47,7 @@
 	<div class="containerFullWidth">
 	<!-- main text area that occupies 2/3rds of the page width -->
 	  <div class="topic_main_2over3">
-		<h1 class="title_article">Welcome to Victoria Chinese Alliance Church </h1>
+		<h1 id="title" class="title_article"></h1>
 		<p>Victoria Chinese Alliance Church is a member of the Christian &amp; Missionary Alliance in Canada. We are one of more than 70 Christian &amp; Missionary Alliance churches in B.C. There are over 80 Chinese Christian &amp; Missionary Alliance churches in Canada.</p>
 		<h2>About our church </h2>
 		<p>Check both file type registration and host application association for {QUERYSTRING} files in the system registry.  Registry errors are also the primary causes for system crashes and slowdowns. It is highly recommended that you or file related errors and any other system errors.</p>
@@ -115,5 +115,9 @@
 	</div> <!--bodyBorderRight-->
 
 </div> <!--bodyContainer-->
+
+<!--appending javascript at the end of body to improve performance-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/viccac.google.js"></script>
 </body>
 </html>
