@@ -1,0 +1,497 @@
+/* CSS Document */
+* {
+    position: static;
+    z-index: 0;
+}
+body {
+	background-color: #DAF3FD;
+	color: #333;
+	font-family: segoe ui,verdana,arial,sans-serif;
+	font-size: 0.83em;
+	height: 100%;
+	margin: 0;
+	min-height: inheritposition: relative;
+	text-align: center;
+}
+#bodyContainer {
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+    width: 962px;
+}
+#bodyBorderLeft {
+    background: url("../images/gl_chrome_mid.png") repeat-y scroll -1px 0 #DAF3FD;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    z-index: 2;
+}
+#bodyBorderLeftTopCap {
+    background: url("../images/gl_chrome_ltr.jpg") no-repeat scroll -1px -1px #DAF3FD;
+    height: 130px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 10px;
+}
+#bodyBorderLeftBotCap {
+    background: url("../images/gl_chrome_ltr.jpg") no-repeat scroll -1px -265px #DAF3FD;
+    bottom: 0;
+    height: 130px;
+    overflow: hidden;
+    position: absolute;
+    width: 10px;
+}
+#bodyContainerBgOutTop {
+    background: url("../images/gl_chrome_grad.png") repeat-x scroll 0 -19px transparent;
+    height: 130px;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+#bodyContainerBgInTop {
+    background: url("../images/gl_chrome_ltr.jpg") no-repeat scroll -1px -529px transparent;
+    height: 130px;
+    margin: 0 171px;
+    overflow: hidden;
+    position: absolute;
+    width: 600px;
+    z-index: 0;
+}
+#bodyHeader {
+    cursor: default;
+    margin: 0;
+    min-height: 0;
+    padding-top: 8px;
+    position: relative;
+    width: 100%;
+}
+#Header {
+    margin: 0;
+    min-height: 0;
+    padding-left: 29px;
+    padding-right: 29px;
+}
+#HeaderTop {
+    height: 10px;
+    margin: 0;
+    min-height: 10px;
+    text-align: right;
+}
+#HeaderBottom {
+    height: auto;
+    margin: 0;
+    min-height: 64px;
+}
+#HeaderWinLogo {
+    float: left;
+    min-height: 0;
+}
+#HeaderMenu {
+    float: right;
+    min-height: 0;
+}
+#bodyFooter {
+    bottom: 0;
+    clear: both;
+    display: block;
+    min-height: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+#Footer {
+    margin: 40px 29px 10px;
+    min-height: 60px;
+}
+
+#Footer, #FooterText {
+    cursor: default;
+}
+
+#FooterText {
+    font-size: 12px;
+    margin: 0 100px;
+    padding: 11px 0;
+    min-height: 0;
+    text-align: center;
+}
+a, a:hover, a:visited {
+    color: #3077CD;
+    text-decoration:none;
+    vertical-align: baseline;
+}
+a:hover {
+	text-decoration: underline;
+}
+#FooterText div {
+    cursor: auto;
+}
+#FooterLinks {
+    display: inline-block;
+	margin-top: 0px;
+    width: 650px;
+}
+#bodyContainerBgOutBot {
+    background: url("../images/gl_chrome_grad.png") repeat-x scroll 0 -151px transparent;
+    bottom: 0;
+    height: 130px;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+#bodyContainerBgInBot {
+    background: url("../images/gl_chrome_ltr.jpg") no-repeat scroll -1px -661px transparent;
+    height: 130px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 600px;
+    z-index: 0;
+}
+
+#bodyBorderRight {
+    background: url("../images/gl_chrome_mid.png") repeat-y scroll -13px 0 #DAF3FD;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    z-index: 2;
+}
+#bodyBorderRightTopCap {
+    background: url("../images/gl_chrome_ltr.jpg") no-repeat scroll -1px -133px #DAF3FD;
+    height: 130px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 10px;
+}
+#bodyBorderRightBotCap {
+    background: url("../images/gl_chrome_ltr.jpg") no-repeat scroll -1px -397px #DAF3FD;
+    bottom: 0;
+    height: 130px;
+    overflow: hidden;
+    position: absolute;
+    width: 10px;
+}
+.sectionTop {
+    display: table;
+    min-height: 0;
+}
+#bodyContentPane {
+    display: inline-block;
+    margin: 0 30px 0 40px;
+    min-height: 0;
+    padding-bottom: 130px;
+    position: relative;
+    width: 872px;
+}
+.containerFullWidth {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 10px;
+	padding: 0 10px 0 10px;
+    width: 872px;
+	clear: both;
+}
+.topic_sidebar {
+    float: right;
+	min-height: 0px;
+    overflow: hidden;
+    width: 250px;
+	text-align:center;
+/*	border-left: #EEE 1px solid;*/
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.topic_sidebarTitle {
+	color:#990000;
+	font-size: 20px;
+	margin: 20px 0 10px 0;
+}
+.topic_main_2over3 {
+    float: left;
+    min-height: 0;
+    overflow: hidden;
+    padding-right: 16px;
+	padding-left: 16px;
+    width: 580px;
+	margin-bottom: 30px;
+	border-right: #DDD 1px solid;
+}
+.topic_main_full_width{
+    float: left;
+    min-height: 0;
+    overflow: hidden;
+    padding-right: 16px;
+	padding-left: 16px;
+    width: 800px;
+	margin-bottom: 30px;
+}
+.containerFullWidth div.topic_body_partial {
+    margin-right: 316px;
+}
+div.topic_body_partial {
+    margin-right: 214px;
+    min-height: 0;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+h1.title_article {
+    color:#990000;
+    font-size: 26px;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2 {
+    color:#990000;
+	font-size:20px;
+	margin:0;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	padding:0;
+}
+.title_accepted {
+	font-size: 150%;
+	font-weight: bold;
+	color: #006600;
+    margin-bottom: 10px;
+	float: left;
+	width: 450px;
+}
+
+.contentContainer {
+	margin-top: 20px;
+}
+
+.para {
+    color: #333333;
+    font-size: 100%;
+    margin-bottom: 16px;
+}
+.para.noTextElement {
+    margin-bottom: 0;
+}
+.para.lastElement {
+    margin-bottom: 0;
+}
+p.lastElement {
+    margin-bottom: 0;
+}
+.userName {
+	font-size: 10px;
+	color: #000;
+	margin: 0 0 2px 0;
+}
+.userTitle {
+	font-size: 10px;
+	color: #000;
+	margin: 0 0 2px 0;
+}
+.message-date {
+	font-size: 0.80em;
+	color:#0044DC;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+p {
+	padding-left:20px;
+	margin-bottom: 10px;
+	line-height: 140%;
+}
+td.downloadInfoTableLabel {
+    color: #003366;
+	font-weight:bold;
+	height: 25;
+	font-size: 12px;
+}
+td.downloadInfoLabel {
+    color: #003366;
+    font-size: 11px;
+	text-align: right;
+	font-weight:bold;
+	height: 20;
+	vertical-align:bottom;
+}
+td.downloadInfo {
+    color: #003366;
+    font-size: 11px;
+	text-align: left;
+	vertical-align:bottom;
+}
+td.download, a.download {
+    background-color:#53A208;
+    border: 1px solid #53A208;
+}
+td.download a {
+    border: 0 none;
+    color: #FFFFFF;
+    display: block;
+    font: bold 108.33%/115% "Segoe UI",sans-serif;
+    padding: 5px 0;
+    text-align: center;
+	text-decoration:underline;
+    width: 100%;
+}
+#qMeTooBox {
+    background: url("/images/gl-metoobackground.jpg") repeat-y scroll right top transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 2px 3px #888888;
+    height: 45px;
+    line-height: 44px;
+    padding: 0 10px;
+	width: 180px;
+}
+.positionRight {
+    float: right;
+}
+.qChildCount {
+    display: inline-block;
+    font-family: Verdana,sans-serif;
+    font-size: 2.45em;
+    font-weight: bold;
+	color:#006600;
+}
+.qChild {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0 7px 0 5px;
+	width: 100px;
+	color:#000066;
+}
+img.profilePic {
+	margin-top: 5px;
+}
+.important-title-red {
+	color: #f00;
+	font-weight:bold;
+}
+.commentBox {
+	background: url("/images/profile.png") left top transparent no-repeat;
+	margin: 0 10px 20px 60px;
+	width: 550px;
+	height: 100px;
+}
+.commentBoxMain {
+	float: right;
+	border: solid 1px #DDDDDD;
+	background-color: #F6F6F6;
+	width: 460px;
+	height: 70px;
+	text-align: left;
+	padding: 20px 10px 5px 30px;
+	font-size: 14px;
+}
+.commentUser {
+	color:#777;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+.commentTimeStamp {
+	color: #3077CD;
+}
+.commentSpacer {
+	height: 30px;
+	min-height: 30px;
+}
+.real-content-2col {
+	background: url("../images/showcase_divider_2col.jpg") no-repeat scroll 0 0 transparent;
+	margin-bottom: 20px;
+	padding: 10px 0;
+}
+.real-content-3col {
+	background: url("../images/showcase_divider.jpg") no-repeat scroll 0 0 transparent;
+	margin-bottom: 20px;
+	padding: 10px 0;
+}
+.real-content-3col-title, .real-content-3col-title a, .real-content-3col-title a:hover, .real-content-3col-title a:visited {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0 5px 0;
+	color: #3077CD;
+	text-decoration: none;
+}
+
+.real-content-3col-title a:hover {
+	text-decoration: underline;
+}
+
+.real-content-3col-desc {
+	font-size: 14px;
+	color: #555;
+	text-align: center;
+	padding: 5px 15px 20px 15px;
+	line-height: 18px;
+}
+
+.header-right {
+	width: 850px;
+	height: 30px;
+	margin: 0 auto 0 auto;
+	padding-bottom: 10px;
+	border-bottom: #DDD 1px solid;
+}
+.header-right, .header-right a, .header-right a:hover, .header-right a:visited {
+	font-size: 18px;
+	vertical-align: bottom;
+	text-align: right;
+	color: #3077CD;
+	text-decoration: none;
+	padding-bottom: 10px;
+}
+
+.header-right a:hover {
+	text-decoration: underline;
+}
+
+.header-right-first {
+	float: left;
+	padding: 0 10px 0 10px;
+}
+.header-right-follow {
+	float: left;
+	padding: 0 10px 0 10px;
+}
+
+.footer-menu {
+	width: 850px;
+	height: auto;
+	margin: 50px auto 0 auto;
+	padding-top: 10px;
+	border-top: #DDD 1px solid;
+}
+
+ul.footer-column {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	list-style-type: none;
+	margin: 10px 0 0 0;
+	padding: 0;
+	width: inherit;
+}
+
+ul.footer-column > li {
+	float: left;
+	width: 150px;
+	margin: 0 20px 10px 0;
+}
+
+ul.footer-column > li ul {
+	list-style-type: none;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+}

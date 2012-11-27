@@ -1,0 +1,207 @@
+﻿<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Victoria Chinese Alliance Church - Home</title>
+    <link rel="icon" href="images/favicon.gif" type="image/x-icon"/>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.gif" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Tangerine'>
+    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css"/>
+    <link rel="stylesheet" type="text/css" href="css/site.css"/>
+
+
+</head>
+
+<body>
+
+<script id="content-template" type="text/x-handlebars-template">
+    <!--start container-->
+    <div id="container">
+
+        <div class="house-logo"></div>
+
+        <!--start header-->
+
+        <header>
+
+            <!--start logo-->
+            <!--<a href="#" id="logo"><img src="images/logo.png" width="180" height="43" alt="logo"/></a>-->
+
+            <!--end logo-->
+
+            <!--start menu-->
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="current">{{menu_home}}</a></li>
+                    <li><a href="#">{{menu_aboutUs}}</a></li>
+                    <li><a href="#">{{menu_service}}</a></li>
+                    <li><a href="#">{{menu_ministry}}</a></li>
+                    <li><a href="#">{{menu_news}}</a></li>
+                    <li><a href="#">{{menu_contactUs}}</a></li>
+
+                </ul>
+            </nav>
+            <!--end menu-->
+
+
+            <!--end header-->
+        </header>
+
+
+        <!--start intro-->
+
+        <section id="intro">
+            <hgroup>
+                <h1 class="theme-verse">"you also, like <span class="keywords">living stones</span>, are being built
+                    into a spiritual house to be a holy priesthood, offering spiritual sacrifices acceptable to God
+                    through Jesus Christ."
+                    <div class="book">1 Peter 2:5</div>
+                </h1>
+                <div class="church-label">{{churchName}}</div>
+            </hgroup>
+
+        </section>
+        <!--end intro-->
+
+
+        <!--start holder-->
+
+        <div class="holder_content church-info">
+
+            <section class="group1">
+                <h3 class="content-title">About us</h3>
+
+                <p>{{aboutUsContent}}</p>
+                <a class="photo_hover3" href="#"><img src="images/picture1.jpg" width="240" height="214"
+                                                      alt="picture1"/></a>
+
+                <a href="#"><span class="button">Read more</span></a>
+
+            </section>
+
+            <section class="group2">
+                <h3 class="content-title">Sunday service</h3>
+
+                <div>English Worship : 09:00 - 10:15</div>
+                <div>Mandarin Worship : 10:25 - 11:25</div>
+                <div>Cantonese Worship : 11:35 - 12:35</div>
+                <div>Junior Worship : 09:00 - 10:15</div>
+                <div>Children Worship : 09:00 - 10:15</div>
+                <a class="photo_hover3" href="#"><img src="images/picture2.jpg" width="240" height="214"
+                                                      alt="picture1"/></a>
+                <a href="#"><span class="button">Read more</span></a>
+
+            </section>
+
+            <section class="group3">
+                <h3 class="content-title">Upcoming events</h3>
+
+                <div id="gcal" class="calendar"></div>
+            </section>
+        </div>
+        <!--end holder-->
+
+
+        <!--start holder-->
+
+        <div class="holder_content">
+
+            <section class="group4">
+                <h3 class="content-title">Latest article</h3>
+
+                <article>
+                    <h4 class="content-subtitle">22.08.2011 - Design to express </h4>
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut
+                        arcu. Phasellus sollicitudin.
+                        Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras
+                        quis libero. </p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut
+                        arcu. Phasellus sollicitudin.
+                        Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras
+                        quis libero. </p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut
+                        arcu. Phasellus sollicitudin.
+                        Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. </p>
+                </article>
+
+            </section>
+
+        </div>
+        <!--end holder-->
+
+
+    </div>
+    <!--end container-->
+
+
+    <!--start footer-->
+    <footer>
+        <div class="container">
+            <div id="FooterTwo"><span class="actionlink" onclick="switchLanguage('english');">English</span> / <span class="actionlink" onclick="switchLanguage('chinese');">中文</span></div>
+            <div id="FooterThree"> Valid html5, design and code by <a href="http://www.marijazaric.com">marija zaric -
+                creative simplicity</a></div>
+        </div>
+    </footer>
+</script>
+
+<div id="content" class="bg"></div>
+
+<!--end footer-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/handlebars-1.0.0.beta.6.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/translation.js"></script>
+<script type="text/javascript">
+    var language = $.cookie('language'),
+        bodySource = $("#content-template").html(),
+        bodyTpl = Handlebars.compile(bodySource),
+        switchLanguage;
+
+    if (language === 'english') {
+        $("#content").html(bodyTpl(englishTranslation));
+    } else if (language === 'chinese') {
+        $("#content").html(bodyTpl(chineseTranslation));
+    } else {
+        // TODO-EM use english as default for now
+        $("#content").html(bodyTpl(englishTranslation));
+    }
+
+    switchLanguage = function (language) {
+        if (language === 'english' || language === 'chinese') {
+            $.cookie('language', language);
+            location.reload();
+        }
+    };
+</script>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+    google.load("gdata", "1.x", { packages: ["calendar"] });
+</script>
+<script src="js/jquery.googlecalreader-1.0.js" type="text/javascript"></script>
+<!-- the mousewheel plugin - optional to provide mousewheel support -->
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $.gCalReader({
+            feedUri: 'http://www.google.com/calendar/feeds/viccacbc@gmail.com/public/full',
+            maxresults: 300,
+            displayCount: false,
+            callbackFn: function () {
+                $('#gcal').jScrollPane();
+            }
+        });
+    });
+</script>
+</body>

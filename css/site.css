@@ -1,0 +1,114 @@
+#intro {
+    height:auto;
+}
+
+.bg {
+    background: none;
+}
+
+.menu {
+    font-size: 14px;
+    border: none
+}
+
+.house-logo {
+    background-image: url("../images/house.gif");
+    width: 500px;
+    height: 305px;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.theme-verse {
+    font-size: 16px;
+    line-height: 40px;
+    color: #758222;
+    width: 50%;
+    text-align: right;
+    padding-left: 450px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    float: left;
+}
+
+.theme-verse .keywords {
+    font-size: 40px;
+    margin-left: 0;
+    color: #7F332E;
+    text-transform: capitalize;
+    font-family: 'Tangerine', cursive;
+}
+
+.theme-verse .book {
+    width: 100%;
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: right;
+    color:#BD8307;
+    font-family: 'Tangerine', cursive;
+    line-height: 20px;
+}
+
+.church-label {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 20px;
+    padding-top: 160px;
+    color: #CCC;
+}
+
+.calendar {
+    height:400px;
+    width: 280px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.calendar .event-item {
+    padding-bottom: 20px;
+}
+
+.calendar .event-item .event-title {
+    color: #BD8307;
+}
+
+.calendar .event-item .description {
+    font-size: 10px;
+}
+
+.content-title {
+    color: #7F332E;
+}
+
+.content-title .content-subtitle {
+    color: #BD8307;
+}
+
+.church-info {
+    background-color: #CCCCCC;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+nav ul li a.current {
+    color: #7F332E;
+}
+
+.group4 {
+    border-top: none;
+}
+
+.highlight {
+    color: #7F332E;
+}
+
+.button {
+    background-color: #758222;
+}
+
+span.actionlink {
+  color: #FFFFFF;
+  text-decoration:underline;
+  cursor:pointer;
+}
