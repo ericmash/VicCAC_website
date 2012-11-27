@@ -1,3 +1,7 @@
+/**
+ * This library loads data from google spreadsheet and populates the loaded data to the matching elements
+ */
+
 var GOOGLE_SPREADSHEET_KEY = '0Amd70QSEewHzdDNPbXR4d0pKRjJpcWZzZHEtdG4wNEE';
 
 $(document).ready(function () {
@@ -14,7 +18,7 @@ function loadGoogleSpreadsheet (worksheetId) {
     $.getJSON(url,
         function (data) {
             var key, type, value;
-            console.log(data);
+
             $.each(data.feed.entry, function (i, entry) {
                 key = entry.gsx$key.$t;
                 type = entry.gsx$type.$t;
