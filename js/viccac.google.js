@@ -17,19 +17,13 @@ function loadGoogleSpreadsheet (worksheetId) {
     var url = 'https://spreadsheets.google.com/feeds/list/' + GOOGLE_SPREADSHEET_KEY + '/' + worksheetId + '/public/values?alt=json-in-script&callback=?'
     $.getJSON(url,
         function (data) {
-            var key, type, value;
+            var key, value;
 
             $.each(data.feed.entry, function (i, entry) {
                 key = entry.gsx$key.$t;
-                type = entry.gsx$type.$t;
                 value = escapeHTML(entry.gsx$value.$t).split('\n').join('<br/>'); // escape html and convert new line to <br/>
 
-                if (type === 'class') {
-                    $('.' + key).html(value);
-                } else {
-                    // TODO need refactor for multiple elements of the same class
-                    $('#' + key).html(value);
-                }
+                $('#' + key).html(value);
             });
         });
 }
@@ -40,15 +34,39 @@ function loadGoogleSpreadsheet (worksheetId) {
  * @return {String} Worksheet id
  */
 function getWorksheetId () {
-    var pageId = $('body').attr('id');
-
     // to find out the worksheet id, use this api and find the information:
     // https://spreadsheets.google.com/feeds/worksheets/spreadsheet_id/private/full
+
+    var pageId = $('body').attr('id');
     switch (pageId) {
         case 'frontpage-en':
             return 'od6';
+        case 'agape':
+            return 'od5';
         case 'canaan':
             return 'od4';
+        case 'dive':
+            return 'oda';
+        case 'ecclesia':
+            return 'od9';
+        case 'eden':
+            return 'odb';
+        case 'fountain':
+            return 'od8';
+        case 'joshua':
+            return 'ocy';
+        case 'mercy':
+            return 'ocz';
+        case 'ruth':
+            return 'ocw';
+        case 'teenz':
+            return 'ocx';
+        case 'young':
+            return 'od2';
+        case 'zion':
+            return 'od3';
+        default:
+            throw "page body id not supported. please check if the id matches the id on this page"
     }
 }
 
